@@ -5,14 +5,14 @@ function WhatIDo() {
   
   return (
     <div>
-        <section className='xl:min-h-[100vh]  max-w-[100vw] min-h-[100vh] bg-background text-text font-[itcMedium] flex items-center '>
+        <section   className='xl:min-h-[100vh]  max-w-[100vw] min-h-[100vh] bg-background text-text font-[itcMedium] flex items-center '>
             <div className="content leading-[8rem] w-full">
                 <h4 className='uppercase xl:text-[1rem] xl:pl-64 md:text-[1.2rem] md:pl-20 text-[1.2rem] pl-10'>What i do</h4>
                
-                  <Info title={"ui/ux"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"}/>
-                  <Info title={"website"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"}/>
-                  <Info title={"branding"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"}/>
-                  <Info title={"animation"} desc={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"}/>
+                  <Info title={"ui/ux"} desc={"I excel in crafting user-centric interfaces that blend intuitive design with seamless user experiences."}/>
+                  <Info title={"website"} desc={"I specialize in creating the coolest and most engaging websites that leave a lasting impression. "}/>
+                  <Info title={"branding"} desc={"I excel in visual branding, transforming concepts into captivating visuals that tell a compelling story."}/>
+                  <Info title={"animation"} desc={"I'm skilled at creating captivating animations in Blender that bring ideas to life with precision and creativity"}/>
                 
             </div>
         </section>

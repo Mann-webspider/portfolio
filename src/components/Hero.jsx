@@ -1,25 +1,37 @@
-import React from "react";
+import {React} from "react";
+
+
 
 function Hero() {
+  
   return (
-    <div className="p-[40px] bg-background min-h-[100vh] text-text font-[itcMedium] ">
-      <nav className="flex justify-between ">
+    <div className="p-[40px] bg-background min-h-[100vh] text-text font-[itcMedium] " data-scroll-container>
+      <nav className="flex justify-between " >
         <div className="logo uppercase font-[itcBold]">shelby</div>
         <div className="menus ">
           <ul className="flex gap-4">
             <li>
+              <a href="#about">
+
               about
+              </a>
             </li>
             <li>
+              <a href="#contact">
+
               contact
+              </a>
             </li>
             <li>
+              <a href="#works">
+
               work
+              </a>
             </li>
           </ul>
         </div>
       </nav>
-      <main className="min-h-[100vh] flex">
+      <main className="min-h-[100vh] flex" data-scroll-section >
       {/* <div className="cta xl:items-center xl:justify-center xl:flex xl:w-fit  m-0 p-0 sm:hidden">
           <span className="xl:rotate-90 xl:w-24 sm:hidden md:block hidden xl:block ">since 2020</span>   
         </div> */}
@@ -38,7 +50,7 @@ function Hero() {
           <div className="images  xl:right-36 xl:top-36 absolute md:top-96 md:right-36 top-36 right-6">
             <img
               src="/images/my-photo.jpg"
-              alt="my-photo"
+              alt="my-pic"
               className="xl:w-[23rem] object-cover xl:h-[31.2rem] md:w-[23rem] md:h-[31.2rem] w-[14rem] h-[24rem]"
             />
           </div>
@@ -47,25 +59,34 @@ function Hero() {
         <div className="social-icon hidden  xl:flex flex-col-reverse">
           <ul className="flex xl:flex-col gap-8 flex-row">
             <li>
+              <a href="https://twitter.com/MannDalsaniya07" target="_blank" rel="noreferrer">
+
               <img
                 src={"/images/twitter.svg"}
                 alt="twiiter-icon"
                 className="xl:w-6 xl:h-6 h-12 w-12"
-              />
+                />
+                </a>
             </li>
             <li>
+              <a href="https://www.instagram.com/thenixshelby/" target="_blank" rel="noreferrer">
+
               <img
                 src={"/images/instagram.svg"}
                 alt="instagram-icon"
                 className="xl:w-6 xl:h-6 h-12 w-12"
-              />
+                />
+                </a>
             </li>
             <li>
+              <a href="https://github.com/Mann-webspider" target="_blank" rel="noreferrer">
+
               <img
                 src={"/images/github.svg"}
                 alt="github-icon"
                 className="xl:w-6 xl:h-6 h-12 w-12"
-              />
+                />
+                </a>
             </li>
           </ul>
         </div>  

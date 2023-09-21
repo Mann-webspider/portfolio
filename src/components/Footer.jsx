@@ -18,11 +18,11 @@ function Footer() {
                     </div>
                 </div>
                 <div className='grid grid-cols-2 xl:text-4xl gap-6 md:text-3xl'>
-                    <a href="" className='hover:text-primary duration-300'>Dribble</a>
-                    <a href="" className='hover:text-primary duration-300'>Instagram</a>
-                    <a href="" className='hover:text-primary duration-300'>Behance</a>
-                    <a href="" className='hover:text-primary duration-300'>Twitter</a>
-                    <a href="" className='hover:text-primary duration-300'>Linkedin</a>
+                    <a href="https://github.com/Mann-webspider" target='_blank' rel="noreferrer" className='hover:text-primary duration-300'>Github</a>
+                    <a href="https://www.instagram.com/thenixshelby/"target='_blank' rel="noreferrer" className='hover:text-primary duration-300'>Instagram</a>
+                    <a href="https://www.behance.net/mannpatel11" target='_blank'rel="noreferrer" className='hover:text-primary duration-300'>Behance</a>
+                    <a href="https://twitter.com/MannDalsaniya07" target='_blank' rel="noreferrer" className='hover:text-primary duration-300'>Twitter</a>
+                    <a href="https://www.linkedin.com/in/mann-dalsaniya-802293241/" target='_blank' rel="noreferrer" className='hover:text-primary duration-300'>Linkedin</a>
                 </div>
             </div>
         </section>
