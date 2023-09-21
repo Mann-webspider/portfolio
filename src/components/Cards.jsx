@@ -3,11 +3,11 @@ import React from 'react'
 function Cards(props) {
   return (
     <div>
-        <div className='w-[588px] h-[588px] rounded-[20px]  relative'>
-            <div className='absolute gradient w-full h-full p-8 flex hover:cursor-pointer rounded-[20px] '>
-              <div className='flex justify-end flex-col text-[#d9d9d9] gap-5 mb-12 '>
+        <div className='xl:w-[36.75rem] xl:h-[36.75rem] md:w-[36.75rem] md:h-[36.75rem] w-[20rem] h-[20rem] rounded-[20px]  relative'>
+            <div className='absolute gradient w-full h-full md:p-8 p-4 flex hover:cursor-pointer rounded-[20px] '>
+              <div className='flex justify-end flex-col text-[#d9d9d9] md:gap-5 md:mb-12 '>
 
-               <h2 className='text-5xl uppercase font-[itcBold] '>{props.title}</h2>
+               <h2 className='md:text-5xl uppercase font-[itcBold] text-2xl'>{props.title}</h2>
                <p>{props.auther || "shelby"}</p>
               </div>
             </div>
