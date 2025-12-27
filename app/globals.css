@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* =========================
+   Custom Fonts
+========================= */
+
+@font-face {
+  font-family: "itcBold";
+  src: url("/font/ITCGothic/Bold/Bold.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "itcMedium";
+  src: url("/font/ITCGothic/Medium/Medium.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "itcDemi";
+  src: url("/font/ITCGothic/Demi/Demi.otf") format("opentype");
+  font-display: swap;
+}
+
+@theme {
+  --color-primary: #eb5939;
+  --color-background: #0f0f0f;
+  --color-text: #b7ab98;
+}
+/* =========================
+   CSS Variables
+========================= */
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+
+/* =========================
+   Global Styles
+========================= */
+
+
+/* =========================
+   Utility Classes
+========================= */
+
+.gradient {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 38%,
+      rgba(0, 0, 0, 0.8) 96.46%
+    ),
+    rgba(211, 211, 211, 0) 50% / cover no-repeat;
+  z-index: 100;
+}
