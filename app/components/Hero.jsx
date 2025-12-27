@@ -112,6 +112,9 @@ function Hero() {
               <li>
                 <Link href="#works">work</Link>
               </li>
+              <li>
+                <Link href="/blog">blogs</Link>
+              </li>
             </ul>
           </div>
         </nav>

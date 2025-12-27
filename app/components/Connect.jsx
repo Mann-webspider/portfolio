@@ -110,7 +110,7 @@ function Connect() {
 
             <div 
               ref={lineRef}
-              className='absolute right-0 top-0 w-[2px] h-full bg-gradient-to-b from-transparent via-primary to-transparent hidden xl:block'
+              className='absolute right-0 top-0 w-0.5 h-full bg-linear-to-b from-transparent via-primary to-transparent hidden xl:block'
             />
           </div>
 
