@@ -66,10 +66,10 @@ GET /api/users/123
 An API gateway is a single entry point for all client requests. It sits in front of your backend or microservices and manages incoming requests.
 
 ##### Instead of:
-![without api gateway](/images/without.png)
+![without api gateway](/images/client-architecture/without.png)
 
 ##### you can do:
-![with api gateway](/images/with.png)
+![with api gateway](/images/client-architecture/with.png)
 
 ### Why its important
 - Central Place for **Auth, Logging, Rate limiting**
@@ -87,7 +87,7 @@ An API gateway is a single entry point for all client requests. It sits in front
 ----------------
 
 # Event driven Architechture EDA
-![Event Driven Architechture](/images/EDA.png)
+![Event Driven Architechture](/images/client-architecture/EDA.png)
 
 Event driven architecture is a software design pattern that allows decoupled applications to asynchronously publish and subscribe to an events through and event broker 
 
@@ -102,6 +102,7 @@ these are the example of events
 - Other services Listen and React
 
 #### Components
+
 | Part         | What it does                    | Example                              |
 | ------------ | ------------------------------- | ------------------------------------ |
 | **Event**    | A fact, something that happened | `UserSignedUp`, `OrderPlaced`        |
