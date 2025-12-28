@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import IntroLoader from '../IntroLoader'
+import { FaGithub, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
+
 
 export default function HeroMinimal() {
   const [showLoader, setShowLoader] = useState(true)
@@ -67,9 +69,10 @@ export default function HeroMinimal() {
               {/* Social Links */}
               <div className='flex gap-6 pt-8'>
                 {[
-                  { href: 'https://github.com/Mann-webspider', label: 'GitHub' },
-                  { href: 'https://twitter.com/MannDalsaniya07', label: 'Twitter' },
-                  { href: 'https://www.instagram.com/thenixshelby/', label: 'Instagram' },
+                 { href: "https://twitter.com/MannDalsaniya07", icon: FaTwitter  },
+                                 { href: "https://www.instagram.com/thenixshelby/", icon: FaInstagram  },
+                                 { href: "https://github.com/Mann-webspider", icon: FaGithub } ,
+                                 { href: "https://linkedin.com/in/manndalsaniya", icon: FaLinkedin } ,
                 ].map((social) => (
                   <Link
                     key={social.label}

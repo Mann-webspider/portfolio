@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import gsap from 'gsap'
@@ -10,8 +10,15 @@ export default function Modal({ modal, projects }) {
   const container = useRef(null)
   const cursor = useRef(null)
   const cursorLabel = useRef(null)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
+    setIsMobile(window.innerWidth < 1024)
+  }, [])
+
+  useEffect(() => {
+    if (isMobile) return // Skip mouse tracking on mobile
+
     const moveContainerX = gsap.quickTo(container.current, "left", { duration: 0.8, ease: "power3" })
     const moveContainerY = gsap.quickTo(container.current, "top", { duration: 0.8, ease: "power3" })
     
@@ -33,13 +40,26 @@ export default function Modal({ modal, projects }) {
 
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
+  }, [isMobile])
 
   const scaleAnimation = {
     initial: { scale: 0, x: "-50%", y: "-50%" },
-    enter: { scale: 1, x: "-50%", y: "-50%", transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] }},
-    closed: { scale: 0, x: "-50%", y: "-50%", transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] }}
+    enter: { 
+      scale: 1, 
+      x: "-50%", 
+      y: "-50%", 
+      transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] }
+    },
+    closed: { 
+      scale: 0, 
+      x: "-50%", 
+      y: "-50%", 
+      transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] }
+    }
   }
+
+  // Don't render modal on mobile
+  if (isMobile) return null
 
   return (
     <>
@@ -57,7 +77,6 @@ export default function Modal({ modal, projects }) {
               className={styles.modal}
               style={{ backgroundColor: project.color }}
             >
-            
               <Image 
                 src={`/images/${project.src}`}
                 width={300}

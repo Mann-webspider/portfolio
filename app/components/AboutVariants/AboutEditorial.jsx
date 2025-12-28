@@ -8,7 +8,7 @@ export default function AboutEditorial() {
       id='about'
       className='min-h-screen bg-background text-text py-12 md:py-20 '
     >
-      <div className='max-w-7xl mx-auto px-6 md:px-12 lg:px-20'>
+      <div className='max-w-8xl mx-auto px-6 md:px-12 lg:px-44'>
         {/* Header */}
         <div className='mb-12 md:mb-20'>
           <p className='text-xs md:text-sm text-text/60 uppercase tracking-widest mb-4'>
@@ -18,7 +18,7 @@ export default function AboutEditorial() {
 
         {/* Large Text */}
         <div className='space-y-6 md:space-y-8 mb-16 md:mb-20'>
-          <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[itcBold] leading-tight md:leading-tight'>
+          <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[itcBold] leading-tight md:leading-tight lg:w-3/4'>
             I'm a <span className='text-primary'>Full-stack Developer</span> passionate 
             about building scalable web applications and exploring cutting-edge technologies.
           </h2>

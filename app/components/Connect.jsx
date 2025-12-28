@@ -71,7 +71,7 @@ function Connect() {
 
   return (
     <div ref={containerRef}>
-      <section className='min-h-screen bg-background text-text font-[itcMedium]' id='contact'>
+      <section className='min-h-screen bg-background text-text font-[itcMedium] lg:my-64' id='contact'>
         <div className='grid xl:grid-cols-2 gap-0 min-h-screen'>
           {/* Left Side - Content */}
           <div className='flex items-center xl:pl-64 md:px-20 px-10 py-20 relative'>

@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 import IntroLoader from "../IntroLoader"
+import { FaGithub, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 import { gsap } from 'gsap'
 function NormalHero() {
@@ -34,7 +35,7 @@ function NormalHero() {
             <div className="text-content flex flex-col justify-center absolute top-24 xl:left-48 md:left-32 z-10">
               <h2 className="text-text xl:text-[5rem] md:text-[3rem] text-4xl">
                 I am <br />
-                <span className="text-primary xl:text-[7.5rem] md:text-[4rem] text-7xl flex ">
+                <span className="text-primary xl:text-[7.5rem] md:text-[4rem] text-5xl">
                   Mann Dalsaniya
                 </span>
               </h2>
@@ -60,22 +61,20 @@ function NormalHero() {
           <div className="social-icon hidden xl:flex flex-col-reverse">
             <ul className="flex xl:flex-col gap-8 flex-row">
               {[
-                { href: "https://twitter.com/MannDalsaniya07", icon: "/images/twitter.svg" },
-                { href: "https://www.instagram.com/thenixshelby/", icon: "/images/instagram.svg" },
-                { href: "https://github.com/Mann-webspider", icon: "/images/github.svg" } ,
-              ].map((item, i) => (
-                <li key={i}>
-                  <Link href={item.href} target="_blank" rel="noreferrer">
-                    <Image
-                      src={item.icon}
-                      alt="social-icon"
-                      className="xl:w-6 xl:h-6 h-12 w-12"
-                      width={24}
-                      height={24}
-                    />
-                  </Link>
-                </li>
-              ))}
+                { href: "https://twitter.com/MannDalsaniya07", icon: FaTwitter  },
+                { href: "https://www.instagram.com/thenixshelby/", icon: FaInstagram  },
+                { href: "https://github.com/Mann-webspider", icon: FaGithub } ,
+                { href: "https://linkedin.com/in/manndalsaniya", icon: FaLinkedin } ,
+              ].map((item, i) => {
+    const Icon = item.icon;
+    return (
+      <li key={i}>
+        <Link href={item.href} target="_blank" rel="noreferrer">
+          <Icon className="w-6 h-6 hover:text-primary transition" />
+        </Link>
+      </li>
+    );
+  })}
             </ul>
           </div>
         </main>

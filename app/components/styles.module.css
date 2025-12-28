@@ -1,40 +1,122 @@
 .body {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  margin-bottom: 100px;
+  width: 100%;
 }
 
 .project {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 80px;
-  border-top: 1px solid rgb(201, 201, 201);
+  padding: 2rem 1.5rem;
+  border-top: 1px solid rgba(217, 217, 217, 0.2);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 
 .project:hover {
-  opacity: 0.5;
+  background-color: rgba(217, 217, 217, 0.05);
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
-.project h2 {
-  font-size: 60px;
-  margin: 0;
-  font-weight: 400;
-  transition: all 0.4s;
+.project:last-child {
+  border-bottom: 1px solid rgba(217, 217, 217, 0.2);
 }
 
-.project:hover h2 {
-  transform: translateX(-10px);
+.project h3 {
+  color: var(--color-text);
+  transition: all 0.3s;
+}
+
+.project:hover h3 {
+  transform: translateX(-0.75rem);
 }
 
 .project p {
-  transition: all 0.4s;
-  font-weight: 300;
+  transition: all 0.3s;
 }
 
 .project:hover p {
-  transform: translateX(10px);
+  transform: translateX(0.75rem);
+}
+
+.modalContainer {
+  position: fixed;
+  height: 20rem;
+  width: 24rem;
+  pointer-events: none;
+  overflow: hidden;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalSlider {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor,
+.cursorLabel {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  pointer-events: none;
+  color: var(--color-background);
+  font-weight: bold;
+  z-index: 10;
+}
+
+.cursor {
+  background-color: var(--color-primary);
+  width: 5rem;
+  height: 5rem;
+}
+
+.cursorLabel {
+  background-color: transparent;
+  width: 5rem;
+  height: 5rem;
+  color: white;
+  font-size: 0.875rem;
+}
+
+/* Desktop only */
+@media (min-width: 1024px) {
+  .project {
+    padding: 3rem;
+  }
+
+  .project:hover {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .project:hover h3 {
+    transform: translateX(-1.5rem);
+  }
+
+  .project:hover p {
+    transform: translateX(1.5rem);
+  }
+
+  .modalContainer,
+  .cursor,
+  .cursorLabel {
+    display: flex;
+  }
 }
