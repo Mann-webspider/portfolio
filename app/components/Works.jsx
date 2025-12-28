@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Modal from './Modal'
 import styles from './styles.module.css'
 import Image from 'next/image'
@@ -11,7 +11,7 @@ export default function Works() {
   const [isMobile, setIsMobile] = useState(false)
 
   // Detect mobile on mount
-  useState(() => {
+  useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 1024)
     }
