@@ -15,7 +15,7 @@ export default function Home() {
       <Hero></Hero>
       <About />
       <WhatIDo></WhatIDo>
-      <Experience />
+      {/* <Experience /> */}
       <Works />
       <Connect />
       <Footer></Footer>

@@ -17,7 +17,7 @@ export default function Works() {
   return (
     <section className='min-h-screen xl:p-44 bg-background py-20 px-10 md:px-20'>
       <h2 className='font-[itcBold] text-[3rem] md:text-[4rem] uppercase mb-20'>
-        Selected Works
+        My Works
       </h2>
       
       <div className={styles.body}>
