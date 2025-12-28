@@ -13,57 +13,6 @@ import { gsap } from "gsap";
 
 function Hero() {
  
-
-
-  // useEffect(() => {
-  //   const tl = gsap.timeline({
-  //     onComplete: () => setShowLoader(false),
-  //   });
-
-  //   tl.fromTo(
-  //     helloRef.current,
-  //     { opacity: 0, scale: 0.9 },
-  //     { opacity: 1, scale: 1, duration: 1, ease: "power3.out" }
-  //   )
-  //     .to(helloRef.current, {
-  //       opacity: 0,
-  //       duration: 0.5,
-  //       delay: 0.5,
-  //     })
-  //     .to(
-  //       leftPanelRef.current,
-  //       {
-  //         xPercent: -100,
-  //         duration: 1.2,
-  //         ease: "power4.inOut",
-  //       },
-  //       "reveal"
-  //     )
-  //     .to(
-  //       rightPanelRef.current,
-  //       {
-  //         xPercent: 100,
-  //         duration: 1.2,
-  //         ease: "power4.inOut",
-  //       },
-  //       "reveal"
-  //     )
-  //     .to(loaderRef.current, {
-  //       opacity: 0,
-  //       duration: 0.3,
-  //     })
-  //     .from(
-  //       heroRef.current,
-  //       {
-  //         opacity: 0,
-  //         y: 40,
-  //         duration: 1,
-  //         ease: "power3.out",
-  //       },
-  //       "-=0.3"
-  //     );
-  // }, []);
-
   return (
     <>
  
