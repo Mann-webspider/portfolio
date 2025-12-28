@@ -1,23 +1,40 @@
+'use client'
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect, useRef, useState } from "react"
+import IntroLoader from "../IntroLoader"
 
-
+import { gsap } from 'gsap'
 function NormalHero() {
+    const [showLoader, setShowLoader] = useState(true)
+  const heroRef = useRef(null)
+
+  useEffect(() => {
+    if (!showLoader) {
+      gsap.from('.hero-item', {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.15,
+        ease: 'power4.out',
+      })
+    }
+  }, [showLoader])
   return (
       <div
-        
+        ref={heroRef}
         className="p-10 bg-background min-h-screen text-text font-[itcMedium]"
         data-scroll-container
       >
         
-        
+        {showLoader && <IntroLoader onComplete={() => setShowLoader(false)} />}
 
         <main className="min-h-screen flex" data-scroll-section>
           <div className="content w-full h-full relative">
             <div className="text-content flex flex-col justify-center absolute top-24 xl:left-48 md:left-32 z-10">
-              <h2 className="text-text xl:text-[5rem] md:text-[3rem] text-[2rem]">
+              <h2 className="text-text xl:text-[5rem] md:text-[3rem] text-4xl">
                 I am <br />
-                <span className="text-primary xl:text-[7.5rem] md:text-[4rem] text-[2rem]">
+                <span className="text-primary xl:text-[7.5rem] md:text-[4rem] text-7xl flex ">
                   Mann Dalsaniya
                 </span>
               </h2>
