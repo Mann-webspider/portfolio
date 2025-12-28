@@ -25,7 +25,6 @@ export default function BlogPage() {
       const data = await res.json()
       setAllPosts(data.posts || [])
       
-      // Extract all unique tags
       const tags = new Set()
       data.posts?.forEach(post => {
         post.tags?.forEach(tag => tags.add(tag))
@@ -42,7 +41,6 @@ export default function BlogPage() {
   const filterPosts = () => {
     let filtered = allPosts
 
-    // Filter by search query (title or description)
     if (searchQuery) {
       filtered = filtered.filter(post =>
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -50,7 +48,6 @@ export default function BlogPage() {
       )
     }
 
-    // Filter by selected tag
     if (selectedTag) {
       filtered = filtered.filter(post =>
         post.tags?.includes(selectedTag)
@@ -76,7 +73,6 @@ export default function BlogPage() {
   return (
     <div className='min-h-screen bg-background py-20 px-6 md:px-10 lg:px-20'>
       <div className='max-w-5xl mx-auto'>
-        {/* Header */}
         <header className='mb-16'>
           <Link 
             href='/' 
@@ -90,9 +86,7 @@ export default function BlogPage() {
           </p>
         </header>
 
-        {/* Search & Filter Section */}
         <div className='mb-12 space-y-6'>
-          {/* Search Bar */}
           <div className='relative'>
             <input
               type='text'
@@ -111,7 +105,6 @@ export default function BlogPage() {
             )}
           </div>
 
-          {/* Tags Filter */}
           {allTags.length > 0 && (
             <div>
               <p className='text-sm text-text/60 mb-3 uppercase tracking-wider'>
@@ -145,7 +138,6 @@ export default function BlogPage() {
             </div>
           )}
 
-          {/* Active Filters & Results Count */}
           <div className='flex items-center justify-between text-sm text-text/60'>
             <p>
               {filteredPosts.length} {filteredPosts.length === 1 ? 'post' : 'posts'} found
@@ -161,7 +153,6 @@ export default function BlogPage() {
           </div>
         </div>
 
-        {/* Posts List */}
         {filteredPosts.length === 0 ? (
           <div className='text-center py-20'>
             <p className='text-2xl text-text/60 mb-4'>No posts found</p>
@@ -176,7 +167,6 @@ export default function BlogPage() {
                 className='block group hover:bg-text/5 p-6 -mx-6 rounded-2xl transition-all duration-300'
               >
                 <article>
-                  {/* Date */}
                   <time className='text-sm text-text/60 uppercase tracking-wider'>
                     {new Date(post.date).toLocaleDateString('en-US', {
                       month: 'long',
@@ -185,17 +175,14 @@ export default function BlogPage() {
                     })}
                   </time>
 
-                  {/* Title */}
                   <h2 className='text-3xl md:text-4xl font-[itcBold] mt-2 mb-3 group-hover:text-primary transition-colors text-text'>
                     {post.title}
                   </h2>
 
-                  {/* Description */}
                   <p className='text-lg text-text/80 mb-4 leading-relaxed'>
                     {post.description}
                   </p>
 
-                  {/* Tags */}
                   {post.tags && post.tags.length > 0 && (
                     <div className='flex gap-2 flex-wrap'>
                       {post.tags.map((tag) => (
@@ -209,7 +196,6 @@ export default function BlogPage() {
                     </div>
                   )}
 
-                  {/* Read More Indicator */}
                   <div className='mt-4 flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity'>
                     <span className='text-sm font-semibold'>Read more</span>
                     <span className='transform group-hover:translate-x-1 transition-transform'>→</span>

@@ -40,7 +40,7 @@ export default async function BlogPost({ params }) {
 
   return (
     <article className='min-h-screen bg-background py-20'>
-      <div className='max-w-5xl mx-auto px-6'>
+      <div className='max-w-4xl mx-auto px-6'>
         {/* Back Button */}
         <Link 
           href='/blog'
@@ -58,10 +58,10 @@ export default async function BlogPost({ params }) {
               year: 'numeric',
             })}
           </time>
-          <h1 className='text-5xl md:text-6xl font-[itcBold] mt-4 mb-6 leading-tight text-text'>
+          <h1 className='text-5xl md:text-5xl font-[itcBold] mt-4 mb-6 leading-tight text-text'>
             {post.frontmatter.title}
           </h1>
-          <p className='text-xl text-text/70 leading-relaxed'>
+          <p className='text-lg text-text/70 leading-relaxed'>
             {post.frontmatter.description}
           </p>
           
@@ -112,8 +112,8 @@ export default async function BlogPost({ params }) {
         {/* Divider */}
         <hr className='border-text/10 mb-12' />
 
-        {/* Content */}
-        <div className='prose prose-lg prose-invert max-w-none prose-headings:text-text prose-p:text-text/90 prose-a:text-primary prose-strong:text-text prose-code:text-primary prose-blockquote:text-text/80 prose-li:text-text/90'>
+        {/* Content - Removed prose classes that conflict */}
+        <div className='blog-content'>
           {post.content}
         </div>
 

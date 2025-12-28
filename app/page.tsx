@@ -6,10 +6,12 @@ import Connect from "@/app/components/Connect";
 import WhatIDo from "@/app/components/WhatIDo";
 import Works from "@/app/components/Works";
 import Footer from "@/app/components/Footer";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
     <div>
+      
       <Hero></Hero>
       <About />
       <WhatIDo></WhatIDo>

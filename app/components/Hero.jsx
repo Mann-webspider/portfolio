@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import Navbar from "./Navbar";
 
 function Hero() {
   const loaderRef = useRef(null);
@@ -99,25 +100,26 @@ function Hero() {
         className="p-10 bg-background min-h-screen text-text font-[itcMedium]"
         data-scroll-container
       >
-        <nav className="flex justify-between">
+        {/* <nav className="flex justify-between sticky top-0 py-6 items-center z-50">
           <div className="logo uppercase font-[itcBold]">shelby</div>
           <div className="menus">
-            <ul className="flex gap-4">
+            <ul className="flex gap-16 mr-12">
               <li>
-                <Link href="#about">about</Link>
+                <Link href="#about">About</Link>
               </li>
               <li>
-                <Link href="#contact">contact</Link>
+                <Link href="#contact">Contact</Link>
               </li>
               <li>
-                <Link href="#works">work</Link>
+                <Link href="#works">Work</Link>
               </li>
               <li>
-                <Link href="/blog">blogs</Link>
+                <Link href="/blog">Blogs</Link>
               </li>
             </ul>
           </div>
-        </nav>
+        </nav> */}
+        
 
         <main className="min-h-screen flex" data-scroll-section>
           <div className="content w-full h-full relative">

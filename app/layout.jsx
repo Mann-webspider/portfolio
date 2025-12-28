@@ -3,6 +3,9 @@ import AdminModal from '@/app/components/AdminModal'
 import "./globals.css";
 
 import SmoothScroll from "./providers/SmoothScroll";
+import { ThemeProvider } from '@/app/components/ThemeProvider'
+import ThemeToggle from '@/app/components/ThemeToggle'
+import Navbar from './components/Navbar';
 
  
 
@@ -21,9 +24,12 @@ export default function RootLayout({
         className={` antialiased`}
       >
         <SmoothScroll>
-          
+          <ThemeProvider>
+      <ThemeToggle />
+      <Navbar/>
           {children}
           <AdminModal />
+          </ThemeProvider>
        
           </SmoothScroll>
       </body>

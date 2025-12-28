@@ -27,6 +27,21 @@
   --color-background: #0f0f0f;
   --color-text: #b7ab98;
 }
+
+/* Light Mode */
+[data-theme='light'] {
+  --color-primary: #eb5939;
+  --color-background: #e4e4e4;
+  --color-text: #0f0f0f;
+}
+
+/* Dark Mode (explicit) */
+[data-theme='dark'] {
+  --color-primary: #eb5939;
+  --color-background: #0f0f0f;
+  --color-text: #b7ab98;
+}
+
 /* =========================
    CSS Variables
 ========================= */
@@ -54,4 +69,45 @@ body {
     ),
     rgba(211, 211, 211, 0) 50% / cover no-repeat;
   z-index: 100;
+}
+
+/* Add this at the end of your globals.css file */
+
+/* Blog Content Styling */
+.blog-content {
+  @apply text-text;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6 {
+  @apply text-text font-bold;
+}
+
+.blog-content p {
+  @apply text-text/90;
+}
+
+.blog-content a {
+  @apply text-primary underline;
+}
+
+.blog-content code {
+  @apply text-primary;
+}
+
+.blog-content strong {
+  @apply text-text font-bold;
+}
+
+.blog-content em {
+  @apply text-text/80 italic;
+}
+
+/* Table specific fixes */
+.blog-content table {
+  @apply w-full;
 }
