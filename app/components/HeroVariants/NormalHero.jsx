@@ -1,81 +1,11 @@
-"use client";
-
-import Image from "next/image";
-import HeroMinimal from '@/app/components/HeroVariants/HeroMinimal'
-import HeroAsymmetric from '@/app/components/HeroVariants/HeroAsymmetric'
-import HeroCentered from '@/app/components/HeroVariants/HeroCentered'
-import HeroFloating from '@/app/components/HeroVariants/HeroFloating'
-import HeroInfinite from '@/app/components/HeroVariants/HeroInfinite'
-import NormalHero from '@/app/components/HeroVariants/NormalHero'
-import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+import Image from "next/image"
+import Link from "next/link"
 
 
-function Hero() {
- 
-
-
-  // useEffect(() => {
-  //   const tl = gsap.timeline({
-  //     onComplete: () => setShowLoader(false),
-  //   });
-
-  //   tl.fromTo(
-  //     helloRef.current,
-  //     { opacity: 0, scale: 0.9 },
-  //     { opacity: 1, scale: 1, duration: 1, ease: "power3.out" }
-  //   )
-  //     .to(helloRef.current, {
-  //       opacity: 0,
-  //       duration: 0.5,
-  //       delay: 0.5,
-  //     })
-  //     .to(
-  //       leftPanelRef.current,
-  //       {
-  //         xPercent: -100,
-  //         duration: 1.2,
-  //         ease: "power4.inOut",
-  //       },
-  //       "reveal"
-  //     )
-  //     .to(
-  //       rightPanelRef.current,
-  //       {
-  //         xPercent: 100,
-  //         duration: 1.2,
-  //         ease: "power4.inOut",
-  //       },
-  //       "reveal"
-  //     )
-  //     .to(loaderRef.current, {
-  //       opacity: 0,
-  //       duration: 0.3,
-  //     })
-  //     .from(
-  //       heroRef.current,
-  //       {
-  //         opacity: 0,
-  //         y: 40,
-  //         duration: 1,
-  //         ease: "power3.out",
-  //       },
-  //       "-=0.3"
-  //     );
-  // }, []);
-
+function NormalHero() {
   return (
-    <>
- 
-      {/* <HeroMinimal/> */}
-      {/* <HeroAsymmetric/> */}
-      {/* <HeroCentered/> */}
-      {/* <HeroFloating/> */}
-      {/* <HeroInfinite/> */}
-      <NormalHero/>
-      {/* ================= HERO CONTENT ================= */}
-      {/* <div
-        ref={heroRef}
+      <div
+        
         className="p-10 bg-background min-h-screen text-text font-[itcMedium]"
         data-scroll-container
       >
@@ -132,10 +62,8 @@ function Hero() {
             </ul>
           </div>
         </main>
-      </div> */}
-
-    </>
-  );
+      </div> 
+  )
 }
 
-export default Hero;
+export default NormalHero
