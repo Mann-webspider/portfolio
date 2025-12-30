@@ -19,7 +19,7 @@ export const projects = [
     challenges: [
       'Complex PDF generation with dynamic templates',
       'Real-time inventory synchronization',
-      'Multi-currency support and calculations',
+      'Multi-currency support and calculation',
     ],
     
     solutions: [
