@@ -166,7 +166,7 @@ export const projects = [
     '/images/geet/user/playback-queue.png',
     '/images/geet/admin/artist.png',
     '/images/geet/admin/tracks.png',
-    '/images/geet/admin/dshboard.png',
+    '/images/geet/admin/dashboard.png',
   ],
   
   metrics: {
@@ -225,7 +225,7 @@ export const projects = [
   
   images: [
     '/images/projects/cartoonflix/admin.png',
-    '/images/projects/cartoonflix/dashboard.png',
+    '/images/projects/cartoonflix/dashbord.png',
     '/images/projects/cartoonflix/dashboard-list.png',
     '/images/projects/cartoonflix/play.png',
   ],
