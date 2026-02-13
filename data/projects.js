@@ -114,5 +114,66 @@ export const projects = [
       institutions: '5',
     },
   },
+  {
+  id: 3,
+  slug: 'geet-music-collaboration',
+  title: 'Geet - Collaborative Music Streaming',
+  tagline: 'Listen together, share emotions, collaborate on playlists',
+  description: 'A collaborative music streaming platform designed for friends to listen together, create shared playlists, and share emotions through music.',
+  thumbnail: '/images/geet/logo.png',
+  year: '2025',
+  category: 'Full-Stack Mobile & Web',
+  tags: ['React Native', 'Next.js', 'Node.js', 'WebSockets', 'Real-time'],
+  status: 'In Development',
+  
+  overview: 'Geet reimagines music streaming by focusing on collaboration and shared experiences. Unlike traditional streaming platforms optimized for individual consumption, Geet enables synchronized listening, collaborative playlists, and emotion-driven music discovery for friends and groups.',
+  
+  challenges: [
+    'Real-time synchronization across multiple users',
+    'Efficient streaming infrastructure with minimal server load',
+    'Scalable playlist collaboration system',
+    'Cross-platform consistency (mobile & web)',
+  ],
+  
+  solutions: [
+    'WebSocket-based real-time synchronization engine',
+    'Optimized audio streaming with adaptive bitrate',
+    'Event-driven architecture for playlist collaboration',
+    'Unified API serving both mobile and web clients',
+  ],
+  
+  features: [
+    'Collaborative playlist creation and editing',
+    'Synchronized real-time listening',
+    'Friend-based music discovery',
+    'Lyrics and karaoke experience',
+    'Event-based playlist templates (trips, parties, dates)',
+    'Music request system with notifications',
+    'Admin dashboard for content management',
+    'Real-time user activity and engagement',
+  ],
+  
+  techStack: {
+    frontend: ['React Native', 'Expo', 'Next.js', 'TypeScript', 'Tailwind CSS', 'NativeWind'],
+    backend: ['Node.js', 'Express', 'PostgreSQL', 'Drizzle ORM'],
+    realtime: ['WebSockets', 'Socket.io'],
+    devops: ['Docker', 'GitHub Actions'],
+    tools: ['Biome', 'pnpm', 'Metro (React Native)'],
+  },
+  
+  images: [
+    '/images/geet/user/welcome-home.png',
+    '/images/geet/user/playback-queue.png',
+    '/images/geet/admin/artist.png',
+    '/images/geet/admin/tracks.png',
+    '/images/geet/admin/dshboard.png',
+  ],
+  
+  metrics: {
+    users: 'Growing',
+    playlists: 'Community-driven',
+    realTimeConnections: 'Multiple concurrent users per session',
+  },
+}
   // Add more projects...
 ]
