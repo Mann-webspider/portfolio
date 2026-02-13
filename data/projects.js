@@ -109,9 +109,9 @@ export const projects = [
     ],
     
     metrics: {
-      students: '500+',
-      quizzes: '200+',
-      institutions: '5',
+      students: '50+',
+      quizzes: '20+',
+      institutions: '1',
     },
   },
   {
@@ -173,6 +173,67 @@ export const projects = [
     users: 'Growing',
     playlists: 'Community-driven',
     realTimeConnections: 'Multiple concurrent users per session',
+  },
+},
+{
+  id: 4,
+  slug: 'cartoonflix',
+  title: 'CartoonFlix',
+  tagline: 'Comprehensive video streaming platform with media packaging and processing',
+  description: 'A full-stack video streaming platform with real-time transcoding, HLS/DASH packaging, and multi-service architecture.',
+  thumbnail: '/images/projects/cartoonflix/dashboard-list.png',
+  year: '2024',
+  category: 'Full-Stack',
+  tags: ['Next.js', 'Go', 'Node.js', 'FFmpeg', 'Docker', 'MongoDB'],
+  
+  overview: 'Built a comprehensive video streaming platform with automated media processing, multiple packaging formats, and scalable microservices architecture for delivering cartoon content globally.',
+  
+  challenges: [
+    'High-performance video transcoding at scale',
+    'Multi-format packaging (HLS/DASH)',
+    'Real-time media processing pipeline',
+    'Distributed service orchestration',
+    'Efficient file storage and delivery',
+  ],
+  
+  solutions: [
+    'Implemented FFmpeg-based transcoding service',
+    'Built microservices architecture with message queues',
+    'Deployed containerized services with Docker',
+    'Optimized media packaging for multiple formats',
+    'Integrated AWS S3 for scalable storage',
+  ],
+  
+  features: [
+    'Video upload and processing pipeline',
+    'Automated transcoding to multiple resolutions',
+    'HLS and DASH format packaging',
+    'Real-time media conversion with queue management',
+    'User authentication and profile management',
+    'Admin dashboard for content management',
+    'Torrent support for distributed delivery',
+    'Responsive streaming platform',
+  ],
+  
+  techStack: {
+    frontend: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    backend: ['Node.js', 'Express', 'Go', 'Python', 'MongoDB'],
+    services: ['FFmpeg', 'RabbitMQ', 'Docker', 'AWS S3'],
+    devops: ['Docker', 'Docker Compose', 'Jenkins', 'K3s'],
+    tools: ['HLS.js', 'DASH.js', 'Torrent API'],
+  },
+  
+  images: [
+    '/images/projects/cartoonflix/admin.png',
+    '/images/projects/cartoonflix/dashboard.png',
+    '/images/projects/cartoonflix/dashboard-list.png',
+    '/images/projects/cartoonflix/play.png',
+  ],
+  
+  metrics: {
+    videoProcessed: '50+',
+    concurrent_streams: '10+',
+    uptime: '99.5%',
   },
 }
   // Add more projects...
