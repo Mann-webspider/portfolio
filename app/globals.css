@@ -54,6 +54,46 @@
   --color-text: #b7ab98;
 }
 
+/* =========================
+   Type & Space Scale
+   Fluid tokens (clamp) — one system, no magic numbers.
+========================= */
+
+:root {
+  /* Type scale */
+  --step--1: clamp(0.8rem, 0.77rem + 0.15vw, 0.9rem);
+  --step-0:  clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+  --step-1:  clamp(1.25rem, 1.1rem + 0.7vw, 1.75rem);
+  --step-2:  clamp(1.75rem, 1.3rem + 2vw, 3rem);
+  --step-3:  clamp(2.5rem, 1.6rem + 4.5vw, 5rem);
+  --step-4:  clamp(3rem, 0.5rem + 11vw, 9rem);
+  --step-5:  clamp(3.5rem, 0.2rem + 15vw, 12rem);
+
+  /* Space scale */
+  --space-2xs: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+  --space-xs:  clamp(0.75rem, 0.65rem + 0.5vw, 1rem);
+  --space-s:   clamp(1rem, 0.85rem + 0.75vw, 1.5rem);
+  --space-m:   clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+  --space-l:   clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --space-xl:  clamp(4rem, 3rem + 5vw, 8rem);
+  --space-2xl: clamp(6rem, 4rem + 10vw, 14rem);
+
+  /* Page side rail — consistent left/right gutter everywhere */
+  --rail: clamp(1.5rem, 5vw, 11rem);
+}
+
+/* Type helpers */
+.text-step--1 { font-size: var(--step--1); }
+.text-step-0  { font-size: var(--step-0); }
+.text-step-1  { font-size: var(--step-1); }
+.text-step-2  { font-size: var(--step-2); }
+.text-step-3  { font-size: var(--step-3); line-height: 0.95; }
+.text-step-4  { font-size: var(--step-4); line-height: 0.92; }
+.text-step-5  { font-size: var(--step-5); line-height: 0.9; }
+
+/* Consistent page gutter */
+.rail { padding-inline: var(--rail); }
+
 /* Light Mode */
 [data-theme='light'] {
   --color-primary: #eb5939;
