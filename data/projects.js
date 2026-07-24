@@ -184,7 +184,7 @@ export const projects = [
   thumbnail: '/images/projects/cartoonflix/dashboard-list.png',
   year: '2024',
   category: 'Full-Stack',
-  liveUrl: "https://portfolio.manndalsaniya.com",
+  liveUrl: "https://cartoonflix.manndalsaniya.com",
   tags: ['Next.js', 'Go', 'Node.js', 'FFmpeg', 'Docker', 'MongoDB'],
   
   overview: 'Built a comprehensive video streaming platform with automated media processing, multiple packaging formats, and scalable microservices architecture for delivering cartoon content globally.',
