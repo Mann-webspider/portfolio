@@ -16,7 +16,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className='w-full px-4 sm:px-6 md:px-12 lg:px-16 xl:px-64 font-[itcMedium] flex justify-between sticky top-0 py-4 md:py-6 items-center z-50 bg-background/80 backdrop-blur-md'>
+      <nav className='w-full px-4 sm:px-6 md:px-12 lg:px-16 xl:px-64 font-[itcMedium] flex justify-between sticky top-0 py-4 md:py-6 items-center z-50 bg-background border-b border-text/10'>
         <Link href='/' className='logo uppercase font-[itcBold] text-lg md:text-xl'>
           shelby
         </Link>
@@ -51,7 +51,7 @@ function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-background/95 backdrop-blur-lg z-40 md:hidden transition-all duration-500 ${
+        className={`fixed inset-0 bg-background z-40 md:hidden transition-all duration-500 ${
           isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
         onClick={() => setIsOpen(false)}
