@@ -7,8 +7,15 @@ import { FaGithub, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 import { gsap } from 'gsap'
 function NormalHero() {
-    const [showLoader, setShowLoader] = useState(true)
+    const [showLoader, setShowLoader] = useState(false)
   const heroRef = useRef(null)
+
+  // Show intro once per browser session only
+  useEffect(() => {
+    if (!sessionStorage.getItem('introSeen')) {
+      setShowLoader(true)
+    }
+  }, [])
 
   useEffect(() => {
     if (!showLoader) {
@@ -28,7 +35,14 @@ function NormalHero() {
         data-scroll-container
       >
         
-        {showLoader && <IntroLoader onComplete={() => setShowLoader(false)} />}
+        {showLoader && (
+          <IntroLoader
+            onComplete={() => {
+              sessionStorage.setItem('introSeen', '1')
+              setShowLoader(false)
+            }}
+          />
+        )}
 
         <main className="min-h-screen flex" data-scroll-section>
           <div className="content w-full h-full relative">

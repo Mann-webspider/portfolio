@@ -51,36 +51,24 @@ export default function ImageLightbox({ images, projectTitle }) {
   return (
     <>
       {/* Thumbnail Grid */}
-      <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6'>
+      <div className='grid grid-cols-1 gap-3 sm:grid-cols-2'>
         {images.map((image, index) => (
           <div
             key={index}
             onClick={() => openLightbox(image, index)}
-            className='group relative aspect-video rounded-2xl overflow-hidden cursor-pointer bg-text/5'
+            className='group relative aspect-video cursor-pointer overflow-hidden bg-text/5'
           >
             <Image
               src={image}
               alt={`${projectTitle} screenshot ${index + 1}`}
               fill
-              className='object-cover group-hover:scale-105 transition-transform duration-500'
+              className='object-cover transition-transform duration-700 group-hover:scale-105'
               sizes='(max-width: 768px) 100vw, 50vw'
             />
-            
-            {/* Overlay */}
-            <div className='absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center'>
-              <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                <div className='w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center'>
-                  <svg className='w-6 h-6 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7' />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            {/* Image Counter Badge */}
-            <div className='absolute bottom-4 right-4 px-3 py-1 bg-black/60 backdrop-blur-sm text-white text-xs rounded-full'>
-              {index + 1} / {images.length}
-            </div>
+            <div className='absolute inset-0 bg-background/0 transition-colors duration-300 group-hover:bg-background/20' />
+            <span className='absolute bottom-3 right-4 tabular-nums text-xs uppercase tracking-wider text-text/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
+              View {String(index + 1).padStart(2, '0')}
+            </span>
           </div>
         ))}
       </div>

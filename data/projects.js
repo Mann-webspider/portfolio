@@ -125,6 +125,7 @@ export const projects = [
   category: 'Full-Stack Mobile & Web',
   tags: ['React Native', 'Next.js', 'Node.js', 'WebSockets', 'Real-time'],
   status: 'In Development',
+  githubUrl: 'https://github.com/Mann-webspider/geet',
   
   overview: 'Geet reimagines music streaming by focusing on collaboration and shared experiences. Unlike traditional streaming platforms optimized for individual consumption, Geet enables synchronized listening, collaborative playlists, and emotion-driven music discovery for friends and groups.',
   
@@ -184,7 +185,8 @@ export const projects = [
   thumbnail: '/images/projects/cartoonflix/dashboard-list.png',
   year: '2024',
   category: 'Full-Stack',
-  liveUrl: "https://portfolio.manndalsaniya.com",
+  liveUrl: "https://cartoonflix.manndalsaniya.com",
+  githubUrl: 'https://github.com/Mann-webspider/Cartoonflix',
   tags: ['Next.js', 'Go', 'Node.js', 'FFmpeg', 'Docker', 'MongoDB'],
   
   overview: 'Built a comprehensive video streaming platform with automated media processing, multiple packaging formats, and scalable microservices architecture for delivering cartoon content globally.',

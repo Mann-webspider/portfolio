@@ -85,25 +85,14 @@ function Connect() {
               </p>
               
               {/* Contact Info */}
-              <div className='space-y-4'>
-                <div className='flex items-center gap-4'>
-                  <div className='w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center'>
-                    <span className='text-primary text-xl'>📧</span>
-                  </div>
-                  <div>
-                    <p className='text-sm text-text/60'>Email</p>
-                    <p className='text-lg'>manndalsaniya.25@gmail.com</p>
-                  </div>
+              <div className='space-y-6 border-t border-text/15 pt-8'>
+                <div>
+                  <p className='text-xs uppercase tracking-wider text-text/50 mb-1'>Email</p>
+                  <p className='text-lg'>manndalsaniya.25@gmail.com</p>
                 </div>
-                
-                <div className='flex items-center gap-4'>
-                  <div className='w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center'>
-                    <span className='text-primary text-xl'>📍</span>
-                  </div>
-                  <div>
-                    <p className='text-sm text-text/60'>Location</p>
-                    <p className='text-lg'>Bhavnagar, Gujarat, IN</p>
-                  </div>
+                <div>
+                  <p className='text-xs uppercase tracking-wider text-text/50 mb-1'>Location</p>
+                  <p className='text-lg'>Bhavnagar, Gujarat, IN</p>
                 </div>
               </div>
             </div>

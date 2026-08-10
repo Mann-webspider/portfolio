@@ -81,16 +81,9 @@ export default function SkillsStacked() {
                       </p>
                       
                       {/* Tools */}
-                      <div className='flex flex-wrap gap-2'>
-                        {skill.tools.map((tool) => (
-                          <span
-                            key={tool}
-                            className='text-xs px-3 py-1.5 bg-primary/10 text-primary rounded-full'
-                          >
-                            {tool}
-                          </span>
-                        ))}
-                      </div>
+                      <p className='text-xs uppercase tracking-wider text-primary/80'>
+                        {skill.tools.join('  /  ')}
+                      </p>
                     </div>
                   </div>
 
@@ -99,23 +92,11 @@ export default function SkillsStacked() {
                     <p className='text-base text-text/0 group-hover:text-text/80 transition-all duration-500 leading-relaxed'>
                       {skill.description}
                     </p>
-                    <div className='flex gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200'>
-                      {skill.tools.slice(0, 4).map((tool) => (
-                        <span
-                          key={tool}
-                          className='text-xs px-3 py-1 bg-primary/10 text-primary rounded-full'
-                        >
-                          {tool}
-                        </span>
-                      ))}
-                    </div>
+                    <p className='mt-4 text-xs uppercase tracking-wider text-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200'>
+                      {skill.tools.slice(0, 4).join('  /  ')}
+                    </p>
                   </div>
                 </div>
-
-                {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent transition-opacity duration-500 -z-10 ${
-                  isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-                }`} />
               </div>
             )
           })}
